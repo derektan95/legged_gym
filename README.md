@@ -25,6 +25,8 @@ Paper: https://arxiv.org/abs/2109.11978
     - Clone this repository
    - `cd legged_gym && pip install -e .`
 
+**NOTE:** In newer version of Nvidia PhysX simulator, we will need to have CUDA 11.4. Instead running the above commands to install dependencies, please run `conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch`. Alternatively, you can visit `https://pytorch.org/get-started/locally/` for the installation command.
+
 ### CODE STRUCTURE ###
 1. Each environment is defined by an env file (`legged_robot.py`) and a config file (`legged_robot_config.py`). The config file contains two classes: one conatianing all the environment parameters (`LeggedRobotCfg`) and one for the training parameters (`LeggedRobotCfgPPo`).  
 2. Both env and config classes use inheritance.  
